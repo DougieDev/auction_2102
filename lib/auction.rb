@@ -14,4 +14,10 @@ class Auction
     # item = Item.new(item_params)
     @items << item
   end
+
+  def item_names
+    items.map do |item|
+      item.name
+    end
+  end
 end
