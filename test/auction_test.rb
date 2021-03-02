@@ -144,4 +144,47 @@ class AuctionTest < Minitest::Test
 
     assert_equal result, @auction.bidders
   end
+
+  # def test_bidder_info
+  #   item1 = Item.new('Chalkware Piggy Bank')
+  #   item2 = Item.new('Bamboo Picture Frame')
+  #   item3 = Item.new('Homemade Chocolate Chip Cookies')
+  #   item4 = Item.new('2 Days Dogsitting')
+  #   item5 = Item.new('Forever Stamps')
+
+  #   attendee1 = Attendee.new(name: 'Megan', budget: '$50')
+  #   attendee2 = Attendee.new(name: 'Bob', budget: '$75')
+  #   attendee3 = Attendee.new(name: 'Mike', budget: '$100')
+
+  #   @auction.add_item(item1)
+  #   @auction.add_item(item2)
+  #   @auction.add_item(item3)
+  #   @auction.add_item(item4)
+  #   @auction.add_item(item5)
+
+  #   item1.add_bid(attendee2, 20)
+  #   item1.add_bid(attendee1, 22)
+  #   item4.add_bid(attendee3, 50)
+  #   item3.add_bid(attendee2, 15)
+
+  #   result = {
+  #        #<Attendee:0x00007ff177a45108 @budget=50, @name="Megan"> =>
+  #          {
+  #            :budget => 50,
+  #            :items => [#<Item:0x00007ff17702e2a0 ...>]
+  #          },
+  #        #<Attendee:0x00007ff17816a4b0 @budget=75, @name="Bob"> =>
+  #          {
+  #            :budget => 75,
+  #            :items => [#<Item:0x00007ff17702e2a0...>, #<Item:0x00007ff177ae45f0 ...>]
+  #          },
+  #        #<Attendee:0x00007ff177a0f5f8 @budget=100, @name="Mike"> =>
+  #          {
+  #            :budget => 100,
+  #            :items => [#<Item:0x00007ff177a9d858...>]
+  #          }
+  #       }
+
+  #   assert_equal [], @auction.bidder_info
+  # end
 end
