@@ -20,4 +20,21 @@ class Auction
       item.name
     end
   end
+
+  def unpopular_items
+    result = []
+    @items.each do |item|
+      result << item if item.bids.empty?
+    end
+    result
+  end
+
+  def potential_revenue
+    result = @items.map do |item|
+      item.bids.values
+    end
+    high_result = result.map do |thing|
+      thing.max
+    end.compact.sum
+  end
 end
