@@ -33,8 +33,18 @@ class Auction
     result = @items.map do |item|
       item.bids.values
     end
-    high_result = result.map do |thing|
-      thing.max
+    high_result = result.map do |arg|
+      arg.max
     end.compact.sum
+  end
+
+  def bidders
+    bidders = []
+    @items.each do |item|
+      item.bids.keys.each do |bidder|
+        bidders << bidder.name
+      end
+    end
+    bidders.uniq
   end
 end
